@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="styles/userProfile.css">
+</head>
+<body>
+    <!-- Side Nav Bar Start-->
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="index.html">Home</a>
+      <button type = "button" class = "collapsiblePanel">Explore</button>
+      <div class="contentPanel">
+        <a href="#" style="font-size:18px;" onclick="switchTo('breakfast')">Breakfast</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('brunch')">Brunch</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('lunch')">Lunch</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('dinner')">Dinner</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('fineDine')">Fine Dining</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('fastFood')">Fast Food</a>
+      </div>
+      <a href="userProfile.html">User Profile</a>
+      <a href="404.html">Settings</a>
+      <div class = bottom>
+        <button type = "button" class = "collapsiblePanel">English</button>
+        <div class="contentPanel">
+          <p style="font-size:12px;color:white;padding-left:25px;">This function of changing languages doesn't work yet.</p>
+        </div>
+        <button type = "button" class = "collapsiblePanel">$CAD</button>
+        <div class = "contentPanel">
+          <p style="font-size:12px;color:white;padding-left:25px;">This function of changing currency doesn't work yet.</p>
+        </div>
+      </div>
+    </div>
+  
+  <div>
+    <div id = "main">
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <h1 id="site-name">Demeter's Garden</h1>
+    </div>
+  <br>
+
+  <div id="user-details-container">
+    <h2 id="account-details">Account Details</h2>
+    <img id="profile-picture" src="images/File1.jpg" alt="Profile Picture" width="100">
+    <button onclick="uploadProfilePicture()">Change Profile Picture</button>
+    <div class="user-details">
+      <p><strong>Name:</strong> James Rodriguez</p>
+      <p><strong>Email:</strong> jamesr55@example.com</p>
+      <p><strong>Phone:</strong> +1-555-123-4567</p>
+      <p><strong>Date of Birth:</strong> 1990-01-01</p>
+      <p><strong>Address:</strong> 123 Main Street, Winnipeg, MB, Canada</p>
+    </div>
+    <button id="modify-account-details" class="action-button">Update Account Details</button>
+  </div>
+
+  <div id="profile-container">
+    <h3>Upcoming Reservations</h3>
+    <div id="reservation-list" class="reservation-list">
+      <input type="text" id="search-input" placeholder="Search reservations by date" oninput="searchReservations()">
+      <table id="reservation-table">
+        <thead>
+          <tr>
+            <th>Reservation ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Restaurant</th>
+            <th>Number of People</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic rows will be inserted here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="reviews-container">
+    <h3>My Reviews</h3>
+    <div id="review-list" class="review-list">
+      <!-- Reviews will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <div id="account-actions">
+    <button id="sign-out-button" class="action-button">Sign Out</button>
+    <button id="delete-account-button" class="action-button danger">Delete Account</button>
+  </div>
+
+  <script src="scripts/userProfile.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  background-color: FFFFEC;
+  padding-top:0px;
+  min-width:600px;
+}
+
+#main{
+  display:flex;
+  margin-top:-10px;
+}
+
+.title{
+  font-size: 50px;
+  font-family: 'Playfair Display', serif;
+  color: #597E52;
+  margin-right:auto;
+}
+
+#filterList{
+  padding-top:15px;
+  padding-bottom:20px;
+  font-style: italic;
+}
+
+#filterList p{
+  margin-top:0px;
+  margin-bottom: 0px;
+}
+
+.checked{
+  color:orange;
+}
+
+a:active{
+  text-decoration:none;
+}
+
+a:link{
+  text-decoration:none;
+}
+
+.reset{
+  color:black;
+  font-size: 16px;
+  cursor:pointer;
+  text-decoration-style:none;
+}
+
+.search {
+  --padding: 10px;
+  width: 50%;
+  max-width: 735px;
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+  border-radius: 20px;
+  background: #f6f6f6;
+}
+
+.search-input {
+  font-size: 16px;
+  font-family: 'Lexend', sans-serif;
+  width: 90%;
+  color: #333333;
+  margin-left: var(--padding);
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.search-input::placeholder, .search-icon {
+  color: rgba(0,0,0,0.5);
+}
+/* To split the page into two sections */    
+    .leftCol{
+        float:left;
+        width: 33.33%;
+    }
+    .rightCol{
+        float:right;
+        width:66.67%;
+        block-size:auto;
+    }
+
+/* For the collapsible tabs in the filters tab */
+    .collapsible{
+        color:black;
+        background-color: #dac8a4;
+        cursor:pointer;
+        padding: 10px;
+        width:90%;
+        border:none;
+        text-align:left;
+        outline:none;
+        font-size:15px;
+        box-shadow: 0px 3px 5px #c1c1c1;
+    }
+    .collapsible:after{
+      content:'\23F5';
+      font-size: 13px;
+      color: black;
+      float: right;
+      margin-left: 5px;
+    }
+    .active:after{
+      content:'\23F7';
+    }
+    .content{
+        display:none;
+        overflow:hidden;
+        background-color:#F0E9DA;
+        padding-right: 5px;
+        width:90%;
+    }
+
+/* Gallery for restaurants */
+    .row{
+      margin: 8px -16px;
+      margin-right:auto;
+      
+    }
+
+    .row,
+    .row > .column{
+      padding: 8px;
+    }
+
+/* For resizing the amount of columns based on window size */
+    .column{
+      float:left;
+      width: 20%;
+      display: none;  
+    }
+
+    @media screen and (max-width:1920px){
+      .column{
+        float:left;
+        flex:25%;
+        width:25%;
+      }
+    }
+
+    @media screen and (max-width:1680px){
+      .column{
+        flex:100%;
+        max-width:100%;
+      }
+    }
+
+    @media screen and (max-width:1200px){
+      .column{
+        float:left;
+        flex:33.33%;
+        width:33.33%;
+      }
+    }
+
+    @media screen and (max-width:1000px){
+      .column{
+        flex:100%;
+        max-width:100%;
+      }
+    }
+
+    @media screen and (max-width:800px){
+      .column{
+        float:left;
+        flex:50%;
+        width:50%;
+      }
+    }
+
+    @media screen and (max-width:600px){
+      .column{
+        flex:100%;
+        max-width:100%;
+      }
+    }
+
+    .row:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .restaurant_content{
+      background-color: rgb(89,126,82);
+      color:white;
+      padding: 10px;
+      box-shadow: -4px 4px 4px #c1c1c1;
+      position:relative;
+      min-height:340px;
+      font-size:12px;
+      cursor:pointer;
+    }
+
+    .restaurant_content:hover{
+      cursor: pointer;
+      transform: scale(1.05,1.05);
+      transition: transform .2s ease-in-out;
+    }
+
+    .restaurant_content p{
+      font-size:12px;
+      margin-top:5px;
+    }
+
+    .restaurant_content h4{
+      font-size:18px;
+      margin-bottom:5px;
+      margin-top:15px;
+      display:inline-block;
+    }
+
+    .show{
+      display:block;
+    }
+
+/* Sliders for price range */
+    .slidecontainer {
+  width: 95%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 15px;
+  border-radius: 5px;  
+  background: white; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px;
+  border-radius: 50%; 
+  background: green;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: green;
+    cursor: pointer;
+  }
+
+
+/* For the sliding side tab for the hidden nav menu */
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(89,126,82);
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  box-shadow: 4px 0px 8px grey;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.sidepanel .bottom{
+  position:absolute;
+  bottom:0px;
+}
+
+.sidepanel .collapsiblePanel{
+  color:white;
+  font-family: "Lato", sans-serif;
+  font-size:25px;
+  background-color: transparent;
+  cursor:pointer;
+  padding: 8px 8px 8px 32px;
+  width:90%;
+  border:none;
+  text-align:left;
+  }
+    
+.sidepanel .collapsiblePanel:after{
+    content:'\23F5';
+    font-size: 25px;
+    color: white;
+  }
+
+.sidepanel .active:after{
+    content:'\23F7';
+  }
+    
+.sidepanel .contentPanel{
+    display:none;
+    overflow:hidden;
+    background-color:transparent;
+    padding-right: 5px;
+    padding-left:20px;
+    width:90%;
+  }
+
+.openbtn {
+  font-size: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #111;
+  border: none;
+  padding-left:35px;
+  margin-right:auto;
+}
+
+.openbtn:hover {
+  cursor: pointer;
+  transform: scale(1.2,1.2);
+  transition: transform .2s ease-in-out;
+}

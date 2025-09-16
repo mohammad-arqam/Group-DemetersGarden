@@ -1,0 +1,270 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles/pageStyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Side Nav Bar Start-->
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="index.html">Home</a>
+    <button type = "button" class = "collapsiblePanel">Explore</button>
+    <div class="contentPanel">
+      <a href="#" style="font-size:18px;" onclick="switchTo('breakfast')">Breakfast</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('brunch')">Brunch</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('lunch')">Lunch</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('dinner')">Dinner</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('fineDine')">Fine Dining</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('fastFood')">Fast Food</a>
+    </div>
+    <a href="userProfile.html">User Profile</a>
+    <a href="404.html">Settings</a>
+    <button type = "button" class = "collapsiblePanel">English</button>
+    <div class="contentPanel">
+      <p style="font-size:12px;color:white;padding-left:25px;">This function of changing languages doesn't work yet.</p>
+    </div>
+    <button type = "button" class = "collapsiblePanel">$CAD</button>
+    <div class = "contentPanel">
+      <p style="font-size:12px;color:white;padding-left:25px;">This function of changing currency doesn't work yet.</p>
+    </div>
+  </div>
+
+<div>
+  <div id = "main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <h1 class = "title">Demeter's Garden</h1>
+  </div>
+  <!-- Side Nav Bar + Title End-->
+
+<center><form action="">
+    <div class="search">
+        <span class="search-icon material-symbols-outlined"> search </span>
+        <input class="search-input" type="search" placeholder="The search bar is currently not functional.">
+    </div>
+</form></center>
+
+<div class = "leftCol" style = "padding:10px">
+<header style = "font-size: 30px; padding-bottom: 8px; display:inline-block;font-family: 'Playfair Display', serif;">Categories</header>
+<button type = "button" class = "collapsible" style="font-size:20px;">Price Range</button>
+<div class="content" style = "padding-left:20px;">
+  <div class="slidecontainer" style="padding-top:15px;">
+    <input type="range" min="10" max="100" value="10" class="slider" id="slider1">
+    <p style = "display:inline-block; padding-left:20px;">Minimum Price: <span id="slider1Val"></span></p>
+    <input type="range" min="100" max="1000" value="1000" class="slider" id="slider2">
+    <p style = "display:inline-block; padding-left:20px;">Maximum Price: <span id="slider2Val"></span></p>
+  </div>
+</div>
+<button type = "button" class = "collapsible" style="font-size:20px;">Rating</button>
+<div class="content" style = "padding-left:20px;padding-top:10px;padding-bottom:10px;">
+  <div class="slidecontainer" style="padding-top:15px;">
+    <input type="range" min="1" max="5" value="1" class="slider" id="slider3">
+    <p style = "display:inline-block; padding-left:20px;">Minimum Rating: <span id="slider3Val"> stars</span></p>
+  </div>
+</div>
+<button type = "button" class = "collapsible" style="font-size:20px;">Restrictions</button>
+<div class="content" style = "padding-left:20px;padding-top:10px;padding-bottom:10px;">
+  <input type="checkbox" id="peanuts" onclick="applyFilter('peanuts')">     Peanut Allergy<br><br>
+  <input type="checkbox" id="fish" onclick="applyFilter('fish')">     Fish Allergy<br><br>
+  <input type="checkbox" id="egg" onclick="applyFilter('egg')">     Egg Allergy<br><br>
+  <input type="checkbox" id="dairy" onclick="applyFilter('dairy')">     Milk and Dairy Allergy<br><br>
+  <input type="checkbox" id="shellfish" onclick="applyFilter('shellfish')">     Shellfish Allergy<br><br>
+  <input type="checkbox" id="wheat" onclick="applyFilter('wheat')">     Wheat Allergy<br><br>
+  <input type="checkbox" id="soy" onclick="applyFilter('soy')">     Soy Allergy<br><br>
+  <input type="checkbox" id="sesame" onclick="applyFilter('sesame')">     Sesame Allergy<br><br>
+  <input type="checkbox" id="treeNut" onclick="applyFilter('treeNut')">     Tree Nut Allergy<br>
+</div>
+<button type = "button" class = "collapsible" style="font-size:20px;">Cuisine Type</button>
+<div class="content" style = "padding-left:15px;padding-top:10px;padding-bottom:10px;">
+  <input type="checkbox" id="indian" onclick="applyFilter('indian')">     Indian<br><br>
+  <input type="checkbox" id="midEastern" onclick="applyFilter('midEastern')">     Middle Eastern<br><br>
+  <input type="checkbox" id="mediterr" onclick="applyFilter('mediterr')">     Mediterranean<br><br>
+  <input type="checkbox" id="carri" onclick="applyFilter('carri')">     Carribean<br><br>
+  <input type="checkbox" id="wAfrican" onclick="applyFilter('wAfrican')">     West African<br><br>
+  <input type="checkbox" id="eAfrican" onclick="applyFilter('eAfrican')">     East African<br><br>
+  <input type="checkbox" id="cAsian" onclick="applyFilter('cAsian')">     Central Asian<br><br>
+  <input type="checkbox" id="eAsian" onclick="applyFilter('eAsian')">     East Asian<br><br>
+  <input type="checkbox" id="seAsian" onclick="applyFilter('seAsian')">     South East Asian<br><br>
+  <input type="checkbox" id="eEuro" onclick="applyFilter('eEuro')">     Eastern European<br><br>
+  <input type="checkbox" id="wEuro" onclick="applyFilter('wEuro')">     Western European<br><br>
+  <input type="checkbox" id="bbq" onclick="applyFilter('bbq')">     BBQ and Steakhouse<br><br>
+  <input type="checkbox" id="cajun" onclick="applyFilter('cajun')">     Cajun<br><br>
+  <input type="checkbox" id="latinAm" onclick="applyFilter('latinAm')">     Latin American<br>
+</div>
+<button type = "button" class = "collapsible" style="font-size:20px;">Meal Type</button>
+<div class="content" style = "padding-left:20px;padding-top:10px;padding-bottom:10px;">
+  <input type="checkbox" id="breakfast" onclick="applyFilter('breakfast')">     Breakfast<br><br>
+  <input type="checkbox" id="brunch" onclick="applyFilter('brunch')">     Brunch<br><br>
+  <input type="checkbox" id="lunch" onclick="applyFilter('lunch')">     Lunch<br><br>
+  <input type="checkbox" id="dinner" onclick="applyFilter('dinner')">     Dinner<br><br>
+  <input type="checkbox" id="fineDine" onclick="applyFilter('fineDine')">     Fine Dining<br><br>
+  <input type="checkbox" id="fastFood" onclick="applyFilter('fastFood')">     Fast Food<br>
+</div>
+<button type = "button" class = "collapsible" style="font-size:20px;">Dietary Options</button>
+<div class="content" style = "padding-left:20px;padding-top:10px;padding-bottom:10px;">
+  <input type="checkbox" id="vegetarian" onclick="applyFilter('vegetarian')">     Vegetarian<br><br>
+  <input type="checkbox" id="vegan" onclick="applyFilter('vegan')">     Vegan<br><br>
+  <input type="checkbox" id="halal" onclick="applyFilter('halal')">     Halal<br><br>
+  <input type="checkbox" id="fishMeat" onclick="applyFilter('fishMeat')">     Pescatarian<br><br>
+  <input type="checkbox" id="gluten" onclick="applyFilter('gluten')">     Gluten-Free<br><br>
+  <input type="checkbox" id="keto" onclick="applyFilter('keto')">     Keto-Friendly<br>
+</div>
+<button type = "button" class = "collapsible" style="font-size:20px;">Specials</button>
+<div class="content" style = "padding-left:20px;padding-top:10px;padding-bottom:10px;">
+  This filter category is currently still being worked on. Sorry for the inconvenience.
+</div>
+</div>
+
+<div class = "rightCol">
+  <div id = "filterList">
+    <p style="color:#2a2a2a;font-size:18px;padding-top:10px;display:inline-block;">Filters:</p>
+    <p id="printedFilters" style="display:inline-block;"></p>
+    <a href = "searchResults.html" class = "reset" style="border-bottom: 1px dashed black;">Reset Filter</a>
+  </div>
+<div class = "row" style = "margin-top:-22px;">
+  <div class = "column 50 3.84 peanuts wheat dairy egg wEuro breakfast brunch vegetarian">
+    <a href = "restaurant.html?restaurant=The Tasty Fork">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>The Tasty Fork</H4> ($50)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span> (3.84 customer rating)
+      <p>A breakfast and brunch restaurant that dabbles in English and French cuisine.</p>
+    </div>
+  </a>
+  </div>
+  <div class = "column 20 4.12 wheat soy midEastern breakfast brunch lunch dinner fastFood vegan keto">
+    <a href = "restaurant.html?restaurant=Ember and Spice">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>Ember and Spice</H4> ($20)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span> (4.12 customer rating)
+      <p>A Middle-Eastern fast food restaurant with a daily meal deal.</p>
+    </div>
+  </a>
+  </div>
+  <div class = "column 200 4.66 wheat dairy sesame mediterr dinner fineDine vegetarian vegan gluten">
+    <a href = "restaurant.html?restaurant=Bella Cucina">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>Bella Cucina</H4> ($200)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span> (4.26 customer rating)
+      <p>An Italian restaurant perfect for dinner dates, family run for over 80 years.</p>
+    </div></a>
+  </div>
+
+  <div class = "column 120 1.97 wheat shellfish fish carri lunch dinner vegetarian fishMeat halal">
+    <a href = "restaurant.html?restaurant=The Harvest Table">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>The Harvest Table</H4> ($100)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span> (1.97 customer rating)
+      <p>A local joint proudly serving the flavours of Jamaica and Trinidad.</p>
+    </div></a>
+  </div>
+  <div class = "column 560 4.98 peanuts egg soy wheat fish indian dinner fineDine vegetarian vegan fishMeat halal gluten">
+    <a href = "restaurant.html?restaurant=Salt and Sage">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>Salt and Sage</H4> ($560)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span> (4.98 customer rating)
+      <p>A Michelin restaurant founded by renowned chef Jasminder Kaur.</p>
+    </div></a>
+  </div>
+  <div class = "column 100 3.49 peanuts dairy soy sesame treeNut bbq lunch dinner gluten keto">
+    <a href = "restaurant.html?restaurant=The Garden Grille">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>The Garden Grille</H4> ($100)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span> (3.49 customer rating)
+      <p>All you can eat Texas-style Steakhouse. Offers 10% discount for parties of 5 or more.</p>
+    </div></a>
+  </div>
+  <div class = "column 35 2.78 wheat egg dairy sesame treeNut cAsian eEuro brunch lunch dinner vegetarian halal">
+    <a href = "restaurant.html?restaurant=Velvet Bistro">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>Velvet Bistro</H4> ($35)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span> (2.34 customer rating)
+      <p>A franchise of Turko-Slavic fusion restaurants focused on preserving old family recipes.</p>
+    </div></a>
+  </div>
+  <div class = "column 10 1.21 wheat egg dairy latinAm breakfast brunch lunch dinner fastFood keto">
+    <a href = "restaurant.html?restaurant=The Pimen-Bro">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>The Pimen-Bro</H4> ($25)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span> (1.21 customer rating)
+      <p>A local Mexican fast food joint founded by two high school best friends.</p>
+    </div></a>
+  </div>
+  <div class = "column 60 2.3 wheat egg dairy shellfish cajun breakfast brunch lunch dinner">
+    <a href = "restaurant.html?restaurant=Driftwood Diner">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>Driftwood Diner</H4> ($25)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span> (2.3 customer rating)
+      <p>A franchise of roadside diners serving travellers with hearty meals a Cajun twist.</p>
+    </div></a>
+  </div>
+  <div class = "column 120 3.67 soy fish eAfrican dinner fineDine vegan halal fishMeat gluten">
+    <a href = "restaurant.html?restaurant=Saffron & Stone">
+    <div class = "restaurant_content">
+      <img src = "images/File1.jpg" alt="File1" style="width:100%">
+      <H4>Saffron & Stone</H4> ($120)<br>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span> (3.67 customer rating)
+      <p>Taste the flavours of Ethiopia while enjoying a gorgeous view of the city from above.</p>
+    </div></a>
+  </div>
+</div>
+
+</div>
+
+
+</div>
+
+<script src = "scripts/pageScript.js"></script>
+
+</body>
+</html>

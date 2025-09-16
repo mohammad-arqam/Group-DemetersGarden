@@ -1,0 +1,313 @@
+*{ box-sizing:border-box; }
+
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFEC;
+    box-sizing: border-box;
+}
+
+#main {
+    display: flex;
+}
+
+.title{
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    color: #597E52;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* Side panel code here */
+  
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(89,126,82);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: 4px 0px 8px grey;
+}
+  
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.sidepanel .bottom{
+    position:absolute;
+    bottom:0px;
+}
+
+.sidepanel .collapsiblePanel{
+    color:white;
+    font-family: "Lato", sans-serif;
+    font-size:25px;
+    background-color: transparent;
+    cursor:pointer;
+    padding: 8px 8px 8px 32px;
+    width:90%;
+    border:none;
+    text-align:left;
+}
+    
+.sidepanel .collapsiblePanel:after{
+    content:'\23F5';
+    font-size: 25px;
+    color: white;
+}
+
+.sidepanel .active:after{
+    content:'\23F7';
+}
+    
+.sidepanel .contentPanel{
+    display:none;
+    overflow:hidden;
+    background-color:transparent;
+    padding-right: 5px;
+    padding-left:20px;
+    width:90%;
+}
+
+.openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #111;
+    border: none;
+    margin-left: 20px;
+}
+
+.openbtn:hover {
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+    transition: transform .2s ease-in-out;
+}
+  
+/* Restaurant details */
+
+.restuarant-info {
+    margin: 0;
+    padding-top: 0;
+}
+
+#restaurantName {
+    font-size: 4em;
+    margin: 0;
+    text-align: center;
+    padding-top: 100px;
+    font-family: "Times";
+}
+
+.restaurant-details {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.restaurant-details span{
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+
+/* The main container between menu and reserve form */
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* 3 Sections */
+
+.menu-container {
+    flex: 3;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tablink-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.tablink { /* Not pressed */
+    background-color: #DAC8A4;
+    color: black;  
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 22px;
+    width: 25%;
+    text-align: center;
+    margin-left: 10px;
+    font-family: "Times";
+} 
+
+.tablink:hover {  /* Hovering sections */
+    background-color: #e9d9b5;
+}
+
+/* Content inside sections */
+
+.tabcontent {
+    color: black;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    margin: 0 auto;
+    float: left;
+    margin-left: 15%;
+    display: none;
+}
+
+#Menu {background-color: #F0E9DA;}
+#Reviews {background-color: #F0E9DA;}
+#Images {background-color: #F0E9DA;}
+
+/* Reserving form */
+
+* {box-sizing: border-box;}
+
+.reserve-container {  /* Reserve box container */
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    z-index: 9;
+    background-color: #FFFFEC;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    max-width: 23%;
+    height: 490px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .reserve-container {
+        display: none;
+    }
+
+    .tabcontent {
+        width: 98vw;
+        text-align: left;
+        padding: 20px;
+        margin: 0 auto;
+        float: left;
+        margin-left: 0;
+        display: none;
+    }
+}
+
+/* Reservation panel */
+
+.reserve-container {
+    width: 200px;
+    position: sticky;
+    top: 20px;
+    background: #e9d9b5;
+    padding: 30px;
+    margin-right: 150px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    height: 500px;
+    max-height: auto;
+}
+
+.reserve-container h1 {
+    text-align: center;
+    margin: 0 0 8px 0;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.reserve-container label {
+    font-size: 20px;
+    color: #555;
+    width: auto;
+    margin-bottom: 100px;
+    font-family: 'Segoe UI';
+}
+
+.reserve-container input, .reserve-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Segoe UI';
+}
+
+input[type="date"] {
+    font-size: 1rem;
+    font-family: 'Segoe UI';
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.time-slots h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.slots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.time-slot {
+    background-color: #ca3c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.time-slot:hover {
+    background-color: #b71c1c;
+}

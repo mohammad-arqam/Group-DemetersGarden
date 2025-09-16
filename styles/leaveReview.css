@@ -1,0 +1,256 @@
+/* General Body Styling with Background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFEC; /* Fallback background color */
+}
+
+/* Menu Icon */
+.menu-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title{
+    font-size: 50px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Playfair Display', serif;
+    color: #597E52;
+}
+
+.openbtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.openbtn:hover {
+    color: #dcdcdc;
+}
+
+/* Review Container */
+
+.review-container {
+    width: 100%;
+    margin: 30px auto;
+    max-width: 900px;
+    padding: 30px;
+    background: #F1E4C3;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+
+.review-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Times;
+}
+
+.user-info {
+    font-family: Times;
+    font-size: 20px;
+} 
+
+/* Star Rating */
+.rating {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 5em;
+    color: grey;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.star:hover,
+.star.active {
+    color: gold;
+}
+
+
+/* Review Textarea */
+
+.desc-container {
+    margin-bottom: 20px;
+    width: 850px;
+}
+
+.desc-container label {
+    font-size: 20px;
+    font-family: Times, serif;
+}
+
+.desc-container textarea {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Attachments */
+.attachments {
+    margin-bottom: 20px;
+}
+
+.attachments label {
+    font-size: 20px;
+    font-family: Times, serif;
+}
+
+.attachments input {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Button Container */
+
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* Submit Button (green button) */
+
+.submit-btn {
+    width: 40%; 
+    padding: 15px; 
+    font-size: 1.2em; 
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Georgia, serif;
+}
+
+.submit-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Cancel Button */
+
+.cancel-btn {
+    width: 40%; /* Reduced width */
+    padding: 15px; /* Reduced padding */
+    font-size: 1.2em; /* Reduced font size */
+    border: none;
+    border-radius: 4px;
+    background-color: #f44336; /* Red button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Georgia, serif;
+}
+
+.cancel-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* For the sliding side tab for the hidden nav menu */
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(89,126,82);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: 4px 0px 8px grey;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  .sidepanel .bottom{
+    position: absolute;
+    bottom: 60px;
+  }
+  
+  .sidepanel .collapsiblePanel{
+    color:white;
+    font-family: "Lato", sans-serif;
+    font-size:25px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px 8px 8px 32px;
+    width: 90%;
+    border: none;
+    text-align: left;
+  }
+      
+  .sidepanel .collapsiblePanel:after{
+    content:'\23F5';
+    font-size: 25px;
+    color: white;
+  }
+  
+  .sidepanel .active:after{
+    content:'\23F7';
+  }
+      
+  .sidepanel .contentPanel{
+    display:none;
+    overflow:hidden;
+    background-color:transparent;
+    padding-right: 5px;
+    padding-left:20px;
+    width: 90%;
+  }
+  
+  .openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #111;
+    border: none;
+    margin-left: 20px;
+  }
+  
+  .openbtn:hover {
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+    transition: transform .2s ease-in-out;
+  }
+  
+  

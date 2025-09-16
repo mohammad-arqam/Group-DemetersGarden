@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Demeter's Garden</title>
+        <link rel="stylesheet" href="rest-reviews-style.css">
+        <style>
+            input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+                -webkit-appearance: spinneret;
+                margin: 0;
+                height: 50px;
+                width: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <!-- Leave a Review link-->
+        <div class="leave-a-review-section">
+            <a href="../Leave-review.html" target="_blank">
+                <button class="leave-review-link"><span>Leave a Review</span></button>
+            </a>
+        </div>
+
+        <!-- Filter options we will have -->
+        <div id="filter-container">
+            <button class="btn active" onclick="filterSelection('all')"> All Reviews</button>
+            <button class="btn" onclick="filterSelection('five')"> 5 Stars</button>
+            <button class="btn" onclick="filterSelection('four')"> 4 Stars</button>
+            <button class="btn" onclick="filterSelection('three')"> 3 Stars</button>
+            <button class="btn" onclick="filterSelection('two')"> 2 Stars</button>
+            <button class="btn" onclick="filterSelection('one')"> 1 Stars</button>
+        </div>
+        
+        <!-- These are going to be the reviews -->
+        <div class="review-container">
+
+            <div class="filterDiv five">
+                <div class="each-review"> <!-- Notes about the reivew -->
+                    <span class="review-name">KAYERUWE</span>  • 
+                    <span>⭐⭐⭐⭐⭐</span>  •
+                    <span>  January 10, 2023</span>
+                </div>
+                <div class="review-descrip"> <!-- Description of the review -->
+                    What a great restaurant!! I love the food here, I would definitely recommend!
+                </div>
+                <div class="review-images"> <!-- Images associated with the review -->
+                    <img class="images" src="./images/Review1/Picture1.jpg" alt="Review 1 Picture 1">
+                    <img class="images" src="./images/Review1/Picture2.jpg" alt="Review 1 Picture 2">
+                    <img class="images" src="./images/Review1/Picture3.jpg" alt="Review 1 Picture 3">
+                </div>
+            </div>
+
+            <div class="filterDiv three">
+                <div class="each-review"> <!-- Notes about the reivew -->
+                    <span class="review-name">SAIDA</span>  • 
+                    <span>⭐⭐⭐</span>  •
+                    <span>  May 6, 2024</span>
+                </div>
+                <div class="review-descrip"> <!-- Description of the review -->
+                    What a great restaurant!! I love the food here, I would definitely recommend!
+                </div>
+                <div class="review-images"> <!-- Images associated with the review -->
+                    <img class="images" src="./images/Review2/Picture4.jpg" alt="Review 1 Picture 1">
+                    <img class="images" src="./images/Review2/Picture5.jpg" alt="Review 1 Picture 2">
+                </div>
+            </div>
+            
+            <div class="filterDiv four">
+                <div class="each-review"> <!-- Notes about the reivew -->
+                    <span class="review-name">MOHAMMAD</span>  • 
+                    <span>⭐⭐⭐⭐</span>  •
+                    <span>  September 12, 2024</span>
+                </div>
+                <div class="review-descrip"> <!-- Description of the review -->
+                    It was good, but a lot smaller than i expected.
+                </div>
+                <div class="review-images"> <!-- Images associated with the review -->
+                    <img class="images" src="./images/Review3/Picture6.jpg" alt="Review 1 Picture 1">
+                    <img class="images" src="./images/Review3/Picture7.jpg" alt="Review 1 Picture 2">
+                    <img class="images" src="./images/Review3/Picture8.jpg" alt="Review 1 Picture 2">
+                </div>
+            </div>
+
+            <div class="filterDiv one">
+                <div class="each-review"> <!-- Notes about the reivew -->
+                    <span class="review-name">JUSTINE</span>  • 
+                    <span>⭐</span>  •
+                    <span>  September 12, 2023</span>
+                </div>
+                <div class="review-descrip"> <!-- Description of the review -->
+                    The waiting time was terrible!!
+                </div>
+            </div>
+
+            <div class="filterDiv two">
+                <div class="each-review"> <!-- Notes about the reivew -->
+                    <span class="review-name">ARION</span>  • 
+                    <span>⭐⭐</span>  •
+                    <span>  September 12, 2024</span>
+                </div>
+                <div class="review-descrip"> <!-- Description of the review -->
+                    Wow this place was not for me! Food was great but the wait was way too long and food was wayyy too expensive!
+                </div>
+                <div class="review-images"> <!-- Images associated with the review -->
+                    <img class="images" src="./images/Review4/Picture9.jpg" alt="Review 1 Picture 1">
+                    <img class="images" src="./images/Review4/Picture10.jpg" alt="Review 1 Picture 2">
+                    <img class="images" src="./images/Review4/Picture11.jpg" alt="Review 1 Picture 2">
+                </div>
+            </div>
+
+            <div class="filterDiv four">
+                <div class="each-review"> <!-- Notes about the reivew -->
+                    <span class="review-name">ARIEL</span>  • 
+                    <span>⭐⭐⭐⭐</span>  •
+                    <span>  October 8, 2024</span>
+                </div>
+                <div class="review-descrip"> <!-- Description of the review -->
+                    The food was amazing!! Got a seat right away.
+                </div>
+                <div class="review-images"> <!-- Images associated with the review -->
+                    <img class="images" src="./images/Review5/Picture12.jpg" alt="Review 1 Picture 1">
+                    <img class="images" src="./images/Review5/Picture13.jpg" alt="Review 1 Picture 2">
+                </div>
+            </div>
+
+            <div class="filterDiv five">
+                <div class="each-review"> <!-- Notes about the reivew -->
+                    <span class="review-name">THEODORE</span>  • 
+                    <span>⭐⭐⭐⭐⭐</span>  •
+                    <span>  August 12, 2023</span>
+                </div>
+                <div class="review-descrip"> <!-- Description of the review -->
+                    Food was great to eat at. Ate here for our anniversary and it was fantastic. I would recommend going to this location, for accomodating my requests.
+                </div>
+                <div class="review-images"> <!-- Images associated with the review -->
+                    <img class="images" src="./images/Review6/Picture14.jpg" alt="Review 1 Picture 1">
+                    <img class="images" src="./images/Review6/Picture15.jpg" alt="Review 1 Picture 2">
+                </div>
+            </div>
+            
+            <div class="filterDiv five">
+                <div class="each-review"> <!-- Notes about the reivew -->
+                    <span class="review-name">ALEXIS</span>  • 
+                    <span>⭐⭐⭐⭐⭐</span>  •
+                    <span>  August 12, 2023</span>
+                </div>
+                <div class="review-descrip"> <!-- Description of the review -->
+                    Great food, I always love going here!
+                </div>
+                <div class="review-images"> <!-- Images associated with the review -->
+                    <img class="images" src="./images/Review7/Picture16.jpg" alt="Review 1 Picture 1">
+                    <img class="images" src="./images/Review7/Picture17.jpg" alt="Review 1 Picture 2">
+                </div>
+            </div>
+
+            <div class="filterDiv two">
+                <div class="each-review"> <!-- Notes about the reivew -->
+                    <span class="review-name">CHAPPELLE</span>  • 
+                    <span>⭐⭐</span>  •
+                    <span>  February 16, 2023</span>
+                </div>
+                <div class="review-descrip"> <!-- Description of the review -->
+                    Not the biggest fan of the limited options and they do have but it's expensive.
+                </div>
+            </div>
+        </div>
+
+        <script src="rest-reviews-script.js"></script>
+    </body>
+
+</html>

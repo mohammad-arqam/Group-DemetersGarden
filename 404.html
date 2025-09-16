@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Demeter's Garden</title>
+
+    <link rel="stylesheet" href="styles/pageStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="index.html">Home</a>
+    <button type = "button" class = "collapsiblePanel">Explore</button>
+    <div class="contentPanel">
+      <a href="#" style="font-size:18px;" onclick="switchTo('breakfast')">Breakfast</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('brunch')">Brunch</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('lunch')">Lunch</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('dinner')">Dinner</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('fineDine')">Fine Dining</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('fastFood')">Fast Food</a>
+    </div>
+    <a href="userProfile.html">User Profile</a>
+    <a href="404.html">Settings</a>
+    <button type = "button" class = "collapsiblePanel">English</button>
+    <div class="contentPanel">
+      <p style="font-size:12px;color:white;padding-left:25px;">This function of changing languages doesn't work yet.</p>
+    </div>
+    <button type = "button" class = "collapsiblePanel">$CAD</button>
+    <div class = "contentPanel">
+      <p style="font-size:12px;color:white;padding-left:25px;">This function of changing currency doesn't work yet.</p>
+    </div>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <h1 class="title" style="margin-right: auto; padding-top: 7px;"> Demeter's Garden </h1>
+  </div>
+  <hr/>
+
+  <center><p class="noPage">
+      Oops! The page you are looking is currently under construction or does not exist.
+  </p>
+
+  <center><p class="returnPara">
+      You can return to the homepage through the button below:
+  </p>
+  
+  <center><div class="home">
+    <button onclick="location.href='index.html'" class="home-button">
+      Go to homepage
+    </button>
+  </div>
+
+  <script src = "scripts/pageScript.js"></script>
+
+</body>
+</html>

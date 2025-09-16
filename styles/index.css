@@ -1,0 +1,265 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  padding-top:8px;
+  background-color:#FFFFEC;
+}
+
+.main {
+  display: flex;
+  margin-top:-10px;
+}
+
+.handwritten {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  color: #597E52;
+  margin-right:auto;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(89,126,82);
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  box-shadow: 4px 0px 8px grey;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.sidepanel .bottom{
+  position: absolute;
+  bottom: 60px;
+}
+
+.sidepanel .collapsiblePanel{
+  color:white;
+  font-family: "Lato", sans-serif;
+  font-size:25px;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 8px 8px 8px 32px;
+  width: 90%;
+  border: none;
+  text-align: left;
+}
+    
+.sidepanel .collapsiblePanel:after{
+  content:'\23F5';
+  font-size: 25px;
+  color: white;
+}
+
+.sidepanel .active:after{
+  content:'\23F7';
+}
+    
+.sidepanel .contentPanel{
+  display:none;
+  overflow:hidden;
+  background-color:transparent;
+  padding-right: 5px;
+  padding-left:20px;
+  width: 90%;
+}
+
+.openbtn {
+  font-size: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #111;
+  border: none;
+  margin-right: auto;
+  padding-left:35px;
+}
+
+.openbtn:hover {
+  cursor: pointer;
+  transform: scale(1.2,1.2);
+  transition: transform .2s ease-in-out;
+}
+
+.search {
+  --padding: 10px;
+  width: 50%;
+  max-width: 735px;
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+  border-radius: 20px;
+  background: #f6f6f6;
+}
+
+.search-input {
+  font-size: 16px;
+  font-family: 'Lexend', sans-serif;
+  width: 90%;
+  color: #333333;
+  margin-left: var(--padding);
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.search-input::placeholder, .search-icon {
+  color: rgba(0,0,0,0.5);
+}
+
+hr {
+  display: block;
+  height: 0px;
+  background-color: #4A5B3F;
+  border-color: #4A5B3F;
+  border-radius: 25px;
+  margin: 30px 0px;
+}
+
+.carousel-container {
+  width: 80%;
+  max-width: 1010px;
+  margin: auto auto auto auto;
+  height: 376px;
+  position: relative;
+}
+
+.carousel-container .carousel-inner-top-deals {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+  padding: 5px;
+}
+
+.carousel-container .carousel-inner-top-rated {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+  padding: 5px;
+}
+
+.carousel-container .carousel-inner-most-viewed {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  display: flex;
+  padding: 5px;
+}
+
+.carousel-container .card-container {
+  width: 240px;
+  flex-shrink: 0;
+  height: 356px;
+  display: flex;
+  margin: 5px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container .card-container .card {
+  background-color: rgb(89,126,82);
+  color:white;
+  box-shadow: -4px 4px 4px #c1c1c1;
+  position: relative;
+  padding: 10px;
+  width: 190px;
+  height: 290px;
+  font-size: 12px;
+}
+
+.carousel-container .card-container .card:hover {
+  cursor: pointer;
+  transform: scale(1.2,1.2);
+  transition: transform .2s ease-in-out;
+}
+
+.card p{
+  font-size:12px;
+  margin-top:5px;
+}
+
+.card h4{
+  font-size:18px;
+  margin-bottom:5px;
+  margin-top:15px;
+  display:inline-block;
+}
+
+
+.carousel-container .nav .button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #4A5B3F;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.nav .prev {
+  left: -30px;
+}
+
+.nav .next {
+  right: -30px;
+}
+
+.nav .prev:hover {
+  filter: invert();
+}
+
+.nav .next:hover {
+  filter: invert();
+}
+
+.card > * {
+  flex: 1;
+}
+
+.checked {
+  color:orange;
+}
+
+.card .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.card .info {
+  flex-basis: 40px;
+  background: #333333;
+  color: #f6f6f6;
+  flex-grow: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}

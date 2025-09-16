@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review</title>
+    <link rel="stylesheet" href="styles/leaveReview.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Side Nav Bar Start-->
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">Home</a>
+        <button type = "button" class = "collapsiblePanel">Explore</button>
+        <div class="contentPanel">
+            <a href="#" style="font-size:18px;" onclick="switchTo('breakfast')">Breakfast</a>
+            <a href="#" style="font-size:18px;" onclick="switchTo('brunch')">Brunch</a>
+            <a href="#" style="font-size:18px;" onclick="switchTo('lunch')">Lunch</a>
+            <a href="#" style="font-size:18px;" onclick="switchTo('dinner')">Dinner</a>
+            <a href="#" style="font-size:18px;" onclick="switchTo('fineDine')">Fine Dining</a>
+            <a href="#" style="font-size:18px;" onclick="switchTo('fastFood')">Fast Food</a>
+        </div>
+        <a href="userProfile.html">User Profile</a>
+        <a href="404.html">Settings</a>
+        <div class = bottom>
+            <button type = "button" class = "collapsiblePanel">English</button>
+        </div>
+        <div class="contentPanel">
+            <p style="font-size:12px;color:white;padding-left:25px;">This function of changing languages doesn't work yet.</p>
+        </div>
+        <button type = "button" class = "collapsiblePanel">$CAD</button>
+        <div class = "contentPanel">
+            <p style="font-size:12px;color:white;padding-left:25px;">This function of changing currency doesn't work yet.</p>
+        </div>
+    </div>
+
+    <!-- Sidebar logo and Name of Restaurant -->
+    <div id = "main" style="display: flex; align-items: center; justify-content: space-between;">
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <header class = "title">Demeter's Garden</span></header><br>
+    </div>
+
+    <!-- Review Container -->
+    <div class="review-container">
+        <section class="review-section">
+            <h2>Leave a Review</h2>
+
+            <!-- Title Input -->
+            <div class="user-info">
+                <p><strong>Name:</strong> James Rodriguez</p>
+            </div>
+
+            <!-- Star Rating -->
+            <div class="rating">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+
+            <!-- Review Text -->
+             <div class="desc-container">
+                <textarea id="review-text" placeholder="What did you like about this restaurant? What did you get? How was the ambiance?"></textarea>
+             </div>
+
+            <!-- Attachments Section -->
+            <div class="attachments">
+                <label for="attachment"><i class="icon-attachment"></i> Attachments</label>
+                <input type="file" id="attachment" multiple>
+            </div>
+
+            <!-- Submit Button and cancel -->
+            <div class="button-container">
+                <button onclick="deleteItself()" id="cancel-review" class="cancel-btn">Cancel</button>
+                <button id="submit-review" class="submit-btn">Submit</button>
+            </div>
+
+        </section>
+    </div>
+            
+    <script src="scripts/leaveReview.js"></script>
+</body>
+</html>

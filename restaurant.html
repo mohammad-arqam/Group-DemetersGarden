@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demeter's Garden</title>
+    <link rel="stylesheet" href="styles/restaurant-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Side Nav Bar Start-->
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">Home</a>
+        <button type = "button" class = "collapsiblePanel">Explore</button>
+        <div class="contentPanel">
+        <a href="#" style="font-size:18px;" onclick="switchTo('breakfast')">Breakfast</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('brunch')">Brunch</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('lunch')">Lunch</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('dinner')">Dinner</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('fineDine')">Fine Dining</a>
+        <a href="#" style="font-size:18px;" onclick="switchTo('fastFood')">Fast Food</a>
+        </div>
+        <a href="userProfile.html">User Profile</a>
+        <a href="404.html">Settings</a>
+        <div class = bottom>
+        <button type = "button" class = "collapsiblePanel">English</button>
+        <div class="contentPanel">
+            <p style="font-size:12px;color:white;padding-left:25px;">This function of changing languages doesn't work yet.</p>
+        </div>
+        <button type = "button" class = "collapsiblePanel">$CAD</button>
+        <div class = "contentPanel">
+            <p style="font-size:12px;color:white;padding-left:25px;">This function of changing currency doesn't work yet.</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Sidebar logo and Name of Restaurant -->
+    <div>
+    <div id = "main" style="display: flex; align-items: center; justify-content: space-between; padding-top:10px;">
+        <button style="position: absolute; left: 0; padding-top: 15px;" class="openbtn" onclick="openNav()">☰</button>
+        <header class = "title">Demeter's Garden</span></header>
+    </div>
+
+    <!-- Name of the restuarant -->
+    <section class="restaurant-info">
+        <h2 id="restaurantName"></h2>
+        <p class="restaurant-details">
+            <span>📍</span>
+            <span id="restaurantLocation"></span> •
+            <span>📞</span>
+            <span id="restaurantPhone"></span> •
+            <span>✿</span>
+            <span id="restaurantDistance"></span>
+        </p>
+    </section>
+
+    <!-- Three sections -->
+    <div class="tablink-container">
+        <button class="tablink" onclick="openPage('Menu', this, '#F0E9DA')" id="defaultOpen">MENU</button>
+        <button class="tablink" onclick="openPage('Reviews', this, '#F0E9DA')">REVIEWS</button>
+        <button class="tablink" onclick="openPage('Images', this, '#F0E9DA')">IMAGES</button>
+    </div>
+
+    <div class="main-container">
+        <div class="menu-container">
+            <!-- This is the MENU tab -->
+            <div id="Menu" class="tabcontent">
+                <object id="menuObject" type="text/html" width="100%" height="2600px"></object>
+            </div>
+
+            <!-- This is the REVIEWS tab -->
+            <div id="Reviews" class="tabcontent">
+                <object id="reviewsObject" type="text/html" width="100%" height="2800px"></object>
+            </div>
+
+            <!-- This is the IMAGES tab -->
+            <div id="Images" class="tabcontent">
+                <object id="imagesObject" type="text/html" width="100%" height="1900px"></object>
+            </div>
+        </div>
+
+        <div class="reserve-container" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Reserve Now</h1>
+                <label for="party-size">Party Size:</label>
+                <select id="party-size" name="party-size">
+                    <option value="1">1 Person</option>
+                    <option value="2" selected>2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6">6 People</option>
+                    <option value="7">7 People</option>
+                    <option value="8">8 People</option>
+                    <option value="9">9 People</option>
+                    <option value="10">10 People</option>
+                    <option value="11">11 People</option>
+                    <option value="12">12 People</option>
+                    <option value="13">13 People</option>
+                    <option value="14">15 People</option>
+                </select>
+                <br>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <br>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required placeholder="Select a time">
+            </form>
+
+            <!-- Available Time Slots -->
+            <div class="time-slots">
+                <h4>Available Slots</h4>
+                <div id="availability" class="slots">
+                    <!-- Time slot buttons will be dynamically inserted here -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./scripts/restaurant-script.js"></script>
+    <script src="scripts/stickyReservationPanel.js"></script>
+    <script src="scripts/pageScript.js"></script>
+</body>
+</html>

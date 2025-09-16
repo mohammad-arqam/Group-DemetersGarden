@@ -1,0 +1,371 @@
+#main{
+    display:flex;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #FFFFEC;
+    color: #2E5A37;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* General Container Spacing */
+
+#profile-picture {
+    border-radius: 50%;
+    margin: 10px auto; /* Center the image */
+    display: block;
+    border: 3px solid #597E52; /* Green border for emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a 3D effect */
+    width: 120px; /* Slightly larger size */
+    height: 120px; /* Ensures it's a circle */
+    object-fit: cover; /* Crop the image to fit in the circle */
+}
+
+
+
+#profile-container, #user-details-container, #reviews-container {
+    max-width: 800px;
+    margin: 30px auto; /* Center containers and add spacing */
+    background: #F1E4C3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styles */
+#site-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: #597E52;
+    margin: 0 0 0 0; /* Space below the site title */
+    margin-right:auto;
+    padding-top:7px;
+}
+
+h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    font-size: 22px;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 20px; /* Space between header and content */
+}
+
+/* User Details */
+.user-details p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: #000000; /* Neutral gray text */
+    margin: 10px 0; /* Space between details */
+}
+
+.user-details strong {
+    color: #597E52; /* Theme green for emphasis */
+}
+
+/* Table Styling for Reservations */
+#reservation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#reservation-table th, #reservation-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 12px; /* More padding for better spacing */
+}
+
+#reservation-table th {
+    background-color: #597E52;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#reservation-table td {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 14px;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 15px; /* Slightly larger buttons */
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    margin: 5px; /* Space between buttons */
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Themed Button Colors */
+button.cancel {
+    background-color: #F28482; /* Soft red for cancel actions */
+    color: #ffffff;
+}
+
+button#sign-out-button {
+    background-color: #597E52; /* Deep green for sign out */
+    color: #FFFFFF;
+}
+
+button#delete-account-button {
+    background-color: #BC4749; /* Bold red for delete actions */
+    color: #FFFFFF;
+}
+
+
+.modal-actions button:first-child {
+    background-color: #597E52; /* Deep green for save */
+    color: #FFFFFF;
+}
+
+.modal-actions button:last-child {
+    background-color: #F28482; /* Soft red for cancel */
+    color: #FFFFFF;
+}
+
+/* Review Section */
+#reviews-container {
+    margin-top: 40px; /* Extra spacing above the reviews section */
+}
+
+#review-list {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.green-container {
+    background-color: #597E52; /* Light beige background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for 3D look */
+}
+
+.review-container {
+    background-color: #FFFFFF; /* White background for individual reviews */
+    padding: 15px;
+    margin-bottom: 20px; /* Space between individual reviews */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Review Header Styling */
+.review-header {
+    font-weight: bold;
+    font-size: 18px;
+    color: #2E5A37; /* Green color for the restaurant name */
+    margin-bottom: 10px;
+}
+
+/* Star Rating Styling */
+.star-rating {
+    color: #FFD700; /* Gold color for stars */
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Review Text Styling */
+.review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4A4A4A;
+    margin-bottom: 10px;
+}
+
+/* Review Date Styling */
+.review-date {
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 350px; /* Wider modal for better spacing */
+    background: #FFFFFF;
+    text-align: center;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input fields in the modal */
+.modal-content form input {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 8px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Label styling */
+.modal-content form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #2E5A37;
+}
+
+/* Space between buttons */
+.modal-actions button {
+    margin: 10px 5px 0 5px;
+}
+
+#modify-account-details {
+    background-color: #597E52; /* Fresh green */
+    color: #FFFFFF; /* White text */
+}
+
+.action-button {
+    background-color: #597E52; 
+    color: #FFFFFF; /* White text */
+}
+
+.action-button:hover {
+    background-color: #416839; /* Darker green for hover effect */
+    transform: scale(1.1); /* Slight hover effect for emphasis */
+}
+
+.cancel-button {
+    background-color: #7c7c7c; /* Neutral gray */
+    color: #fffefe;
+}
+
+.cancel-button:hover {
+    background-color: #676565; /* Darker gray on hover */
+}
+
+/* For the sliding side tab for the hidden nav menu */
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(89,126,82);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: 4px 0px 8px grey;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  .sidepanel .bottom{
+    position:absolute;
+    bottom:0px;
+  }
+  
+  .sidepanel .collapsiblePanel{
+    color:white;
+    font-family: "Lato", sans-serif;
+    font-size:25px;
+    background-color: transparent;
+    cursor:pointer;
+    padding: 8px 8px 8px 32px;
+    width:90%;
+    border:none;
+    text-align:left;
+    }
+      
+  .sidepanel .collapsiblePanel:after{
+      content:'\23F5';
+      font-size: 25px;
+      color: white;
+    }
+  
+  .sidepanel .active:after{
+      content:'\23F7';
+    }
+      
+  .sidepanel .contentPanel{
+      display:none;
+      overflow:hidden;
+      background-color:transparent;
+      padding-right: 5px;
+      padding-left:20px;
+      width:90%;
+    }
+  
+  .openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #111;
+    border: none;
+    margin-right:auto;
+  }
+  
+  .openbtn:hover {
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+    transition: transform .2s ease-in-out;
+  }
+  
+  /* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* Search Bar Styling */
+  #search-input {
+    width: calc(100% - 20px); /* Full width with padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #2E5A37; /* Green for thematic consistency */
+}
+
+#search-input::placeholder {
+    color: #aaa;
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Demeter's Garden</title>
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Side Nav Bar Start-->
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.html">Home</a>
+            <button type = "button" class = "collapsiblePanel">Explore</button>
+            <div class="contentPanel">
+                <a href="#" style="font-size:18px;" onclick="switchTo('breakfast')">Breakfast</a>
+                <a href="#" style="font-size:18px;" onclick="switchTo('brunch')">Brunch</a>
+                <a href="#" style="font-size:18px;" onclick="switchTo('lunch')">Lunch</a>
+                <a href="#" style="font-size:18px;" onclick="switchTo('dinner')">Dinner</a>
+                <a href="#" style="font-size:18px;" onclick="switchTo('fineDine')">Fine Dining</a>
+                <a href="#" style="font-size:18px;" onclick="switchTo('fastFood')">Fast Food</a>
+            </div>
+            <a href="userProfile.html">User Profile</a>
+            <a href="404.html">Settings</a>
+            <div class = bottom>
+                <button type = "button" class = "collapsiblePanel">English</button>
+                <div class="contentPanel">
+                <p style="font-size:12px;color:white;padding-left:25px;">This function of changing languages doesn't work yet.</p>
+                </div>
+                <button type = "button" class = "collapsiblePanel">$CAD</button>
+                <div class = "contentPanel">
+                <p style="font-size:12px;color:white;padding-left:25px;">This function of changing currency doesn't work yet.</p>
+                </div>
+            </div>
+        </div>
+        <center><div class="main">
+            <button class="openbtn" onclick="openNav()">☰</button>
+            <h1 class="title">Demeter's Garden</h1>
+        </div>
+        <hr/>
+        <center><h2 class="handwritten"> Top Deals </h2>
+        <center><div class="carousel-container">
+            <div class="carousel-inner-top-deals">
+
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=The Tasty Fork">
+                    <div class="card">
+                        <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                        <H4>The Tasty Fork</H4> ($50)<br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span> (3.84 customer rating)
+                        <p>A breakfast and brunch restaurant that dabbles in English and French cuisine.</p>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Ember and Spice">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Ember and Spice</H4> ($20)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span> (4.12 customer rating)
+                            <p>A Middle-Eastern fast food restaurant with a daily meal deal.</p>
+                        </div>
+                    </div></a>
+                </div>
+                
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Bella Cucina">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Bella Cucina</H4> ($200)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span> (4.26 customer rating)
+                            <p>An Italian restaurant perfect for dinner dates, family run for over 80 years.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=The Harvest Table">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>The Harvest Table</H4> ($100)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (1.97 customer rating)
+                            <p>A local joint proudly serving the flavours of Jamaica and Trinidad.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Salt and Sage">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Salt and Sage</H4> ($560)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span> (4.98 customer rating)
+                            <p>A Michelin restaurant founded by renowned chef Jasminder Kaur.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=The Garden Grille">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>The Garden Grille</H4> ($100)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (3.49 customer rating)
+                            <p>All you can eat Texas-style Steakhouse. Offers 10% discount for parties of 5 or more.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Velvet Bistro">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Velvet Bistro</H4> ($35)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (2.34 customer rating)
+                            <p>A franchise of Turko-Slavic fusion restaurants focused on preserving old family recipes.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=The Pimen-Bro">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>The Pimen-Bro</H4> ($25)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (1.21 customer rating)
+                            <p>A local Mexican fast food joint founded by two high school best friends.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Driftwood Diner">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Driftwood Diner</H4> ($25)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (2.3 customer rating)
+                            <p>A franchise of roadside diners serving travellers with hearty meals a Cajun twist.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Saffron & Stone">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Saffron & Stone</H4> ($120)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (3.67 customer rating)
+                            <p>Taste the flavours of Ethiopia while enjoying a gorgeous view of the city from above.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+            </div>
+            <div class="nav">
+                <button class="button prev" onclick="goLeftTopDeals()">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_left
+                    </span>
+                </button>
+                <button class="button next" onclick="goRightTopDeals()">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_right
+                    </span>
+                </button>
+            </div>
+        </div>
+        <center><h2 class="handwritten"> Top Rated </h2>
+        <center><div class="carousel-container">
+            <div class="carousel-inner-top-rated">
+
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Salt and Sage">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Salt and Sage</H4> ($560)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span> (4.98 customer rating)
+                            <p>A Michelin restaurant founded by renowned chef Jasminder Kaur.</p>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Ember and Spice">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Ember and Spice</H4> ($20)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span> (4.12 customer rating)
+                            <p>A Middle-Eastern fast food restaurant with a daily meal deal.</p>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Bella Cucina">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Bella Cucina</H4> ($200)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span> (4.26 customer rating)
+                            <p>An Italian restaurant perfect for dinner dates, family run for over 80 years.</p>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=The Tasty Fork">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>The Tasty Fork</H4> ($50)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (3.84 customer rating)
+                            <p>A breakfast and brunch restaurant that dabbles in English and French cuisine.</p>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Saffron & Stone">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Saffron & Stone</H4> ($120)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (3.67 customer rating)
+                            <p>Taste the flavours of Ethiopia while enjoying a gorgeous view of the city from above.</p>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=The Garden Grille">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>The Garden Grille</H4> ($100)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (3.49 customer rating)
+                            <p>All you can eat Texas-style Steakhouse. Offers 10% discount for parties of 5 or more.</p>
+                        </div>
+                    </div></a>
+                </div>
+
+            </div>
+            <div class="nav">
+                <button class="button prev" onclick="goLeftTopRated()">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_left
+                    </span>
+                </button>
+                <button class="button next" onclick="goRightTopRated()">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_right
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <center><h2 class="handwritten"> Most Viewed </h2>
+        
+        <center><div class="carousel-container">
+            <div class="carousel-inner-most-viewed">
+
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Salt and Sage">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Salt and Sage</H4> ($560)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span> (4.98 customer rating)
+                            <p>A Michelin restaurant founded by renowned chef Jasminder Kaur.</p>
+                        </div>
+                    </div></a>
+                </div>
+              
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Ember and Spice">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Ember and Spice</H4> ($20)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span> (4.12 customer rating)
+                            <p>A Middle-Eastern fast food restaurant with a daily meal deal.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=The Harvest Table">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>The Harvest Table</H4> ($100)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (1.97 customer rating)
+                            <p>A local joint proudly serving the flavours of Jamaica and Trinidad.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Bella Cucina">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Bella Cucina</H4> ($200)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span> (4.26 customer rating)
+                            <p>An Italian restaurant perfect for dinner dates, family run for over 80 years.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=The Tasty Fork">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>The Tasty Fork</H4> ($50)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (3.84 customer rating)
+                            <p>A breakfast and brunch restaurant that dabbles in English and French cuisine.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Velvet Bistro">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Velvet Bistro</H4> ($35)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (2.34 customer rating)
+                            <p>A franchise of Turko-Slavic fusion restaurants focused on preserving old family recipes.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=Saffron & Stone">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>Saffron & Stone</H4> ($120)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (3.67 customer rating)
+                            <p>Taste the flavours of Ethiopia while enjoying a gorgeous view of the city from above.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+                <div class="card-container">
+                    <a href = "restaurant.html?restaurant=The Garden Grille">
+                    <div class="card">
+                        <div class = "restaurant_content">
+                            <img src = "images/File1.jpg" alt="File1" style="width:100%">
+                            <H4>The Garden Grille</H4> ($100)<br>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> (3.49 customer rating)
+                            <p>All you can eat Texas-style Steakhouse. Offers 10% discount for parties of 5 or more.</p>
+                        </div>
+                    </div></a>
+                </div>
+        
+            </div>
+
+            <div class="nav">
+                <button class="button prev" onclick="goLeftMostViewed()">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_left
+                    </span>
+                </button>
+                <button class="button next" onclick="goRightMostViewed()">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_right
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src = "scripts/index.js"></script>
+    <script src = "scripts/pageScript.js"></script>
+
+    </body>
+</html>

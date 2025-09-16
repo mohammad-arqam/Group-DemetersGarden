@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirm Reservation</title>
+  <link rel="stylesheet" href="styles/confirmReservation.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+</head>
+
+<body class="confirm-reservation-page">
+
+  <!-- Side Nav Bar Start-->
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="index.html">Home</a>
+    <button type = "button" class = "collapsiblePanel">Explore</button>
+    <div class="contentPanel">
+      <a href="#" style="font-size:18px;" onclick="switchTo('breakfast')">Breakfast</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('brunch')">Brunch</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('lunch')">Lunch</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('dinner')">Dinner</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('fineDine')">Fine Dining</a>
+      <a href="#" style="font-size:18px;" onclick="switchTo('fastFood')">Fast Food</a>
+    </div>
+    <a href="userProfile.html">User Profile</a>
+    <a href="404.html">Settings</a>
+    <div class = bottom>
+      <button type = "button" class = "collapsiblePanel">English</button>
+      <div class="contentPanel">
+        <p style="font-size:12px;color:white;padding-left:25px;">This function of changing languages doesn't work yet.</p>
+      </div>
+      <button type = "button" class = "collapsiblePanel">$CAD</button>
+      <div class = "contentPanel">
+        <p style="font-size:12px;color:white;padding-left:25px;">This function of changing currency doesn't work yet.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar logo and Name of Restaurant -->
+  <div id = "main" style="display: flex; align-items: center; justify-content: space-between; padding-top:25px; padding-bottom:20px;">
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <header class = "title">Demeter's Garden</span></header><br>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="confirmation-container">
+    <h2>Reservation confirmation</h2>
+
+    <!-- Reservation Summary -->
+    <section class="reservation-summary">
+      <div class="section-title">Reservation Details</div>
+    </section>
+
+    <!-- User Information Form -->
+    <section class="user-details">
+      <div class="section-title">Your Information</div>
+      <form id="user-details-form">
+        <label for="first-name">First Name: <span class="required">*</span></label>
+        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+        <label for="last-name">Last Name: <span class="required">*</span></label>
+        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+        <label for="phone">Phone Number: <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="XXX XXX XXXX" required 
+          pattern="^(\d{10}|\(\d{3}\) \d{3}-\d{4}|\d{3}-\d{3}-\d{4})$" 
+          title="Please enter a valid phone number in one of these formats: 123-456-7890, (123) 456-7890, or 1234567890.">
+        <label for="email">Email: <span class="required">*</span></label>
+        <input type="text" id="email" name="email" placeholder="johnDoe@example.com" required 
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+          title="Please enter a valid email address.">
+        <label for="special-occasion">Special Occasion (Optional):</label>
+        <select id="special-occasion" name="special-occasion">
+          <option value="">None</option>
+          <option value="birthday">Birthday</option>
+          <option value="anniversary">Anniversary</option>
+          <option value="other">Celebration</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="allergies">Allergy Notes (Optional):</label>
+        <textarea id="allergies" name="allergies" placeholder="Let us know if you have any allergies"></textarea>
+        <div class="form-buttons">
+          <a href="restaurant.html?restaurant=RESTAURANT%20NAME&location=Address,%20Winnipeg,%20MB&phone=(204)%20phone-number&distance=0.0%20km">
+            <button type="button" id="cancel-button" class="cancel">Cancel</button>
+          </a>
+          <button id="confirm-button" type="submit" class="confirm">Confirm Reservation</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <!-- Pop-Up Section -->
+  <div id="success-popup" class="success-popup">
+    <div class="success-popup-content">
+      <h3>Reservation Confirmed! 🎉</h3>
+      <p>Your reservation at <strong>Demeter's Garden</strong> has been successfully confirmed!</p>
+      <p>You will receive an email shortly with the details of your reservation.</p>
+      <button id="return-home" class="return-home">Return to Home</button>
+    </div>
+  </div>
+
+  <script src="scripts/confirmReservation.js"></script>
+</body>
+</html>
